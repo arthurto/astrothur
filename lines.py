@@ -23,4 +23,4 @@ def mean_ew(file,H,Δ):
     flx_smooth = float(f((H+Δ)/u.AA)+f((H-Δ)/u.AA))/2
     # print(flx_smooth)
     spec = Spectrum1D(flx*u.Jy,wl*u.AA)
-    return equivalent_width(spec,regions=sr,continuum=flx_smooth)/Δ
+    return equivalent_width(spec,regions=sr,continuum=flx_smooth)/u.AA
